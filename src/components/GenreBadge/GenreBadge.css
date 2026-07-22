@@ -1,0 +1,10 @@
+.genre-badge {
+    background: rgba(61, 210, 204, 0.1);
+    color: var(--accent-color);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid rgba(61, 210, 204, 0.2);
+    white-space: nowrap;
+}

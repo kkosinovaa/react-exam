@@ -1,0 +1,13 @@
+.poster-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.movie-poster {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 2/3;
+    transition: transform var(--transition);
+}

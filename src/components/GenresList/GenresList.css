@@ -1,0 +1,44 @@
+.genres-wrapper {
+    width: 100%;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.genres-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.genres-container {
+    display: flex;
+    gap: 12px;
+    padding: 4px 0;
+    width: max-content;
+}
+
+.genre-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    backdrop-filter: blur(10px);
+}
+
+.genre-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.genre-btn.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #000;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(61, 210, 204, 0.4);
+}

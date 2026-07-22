@@ -1,0 +1,108 @@
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(11, 15, 41, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 16px 0;
+    transition: all var(--transition);
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo-accent {
+    color: var(--accent-color);
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-primary);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 16px 10px 40px;
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 14px;
+    width: 240px;
+    outline: none;
+    transition: border-bottom-color var(--transition), box-shadow var(--transition);
+}
+
+.search-input:focus {
+    border-bottom-color: var(--accent-color);
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.user-profile {
+    cursor: pointer;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: transform var(--transition), border-color var(--transition);
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
+}

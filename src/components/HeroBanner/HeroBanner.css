@@ -1,0 +1,124 @@
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-background-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-background-image.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(90deg, var(--bg-main) 0%, rgba(11, 15, 41, 0.6) 50%, rgba(11, 15, 41, 0) 100%),
+    linear-gradient(0deg, var(--bg-main) 0%, rgba(11, 15, 41, 0) 15%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0 40px;
+    color: var(--text-primary);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.hero-meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 24px;
+    align-items: center;
+}
+
+.meta-tag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-tag.rating {
+    color: var(--rating-color);
+    border-color: var(--rating-color);
+    background: rgba(255, 184, 0, 0.1);
+}
+
+.hero-overview {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hero-play-btn {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 14px 48px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.hero-play-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(61, 210, 204, 0.3);
+}

@@ -1,0 +1,15 @@
+.stars-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.star-icon {
+    color: var(--rating-color);
+}
+
+.rating-value {
+    color: var(--rating-color);
+    font-weight: 600;
+    font-size: 14px;
+}

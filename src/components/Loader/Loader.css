@@ -1,0 +1,26 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    width: 100%;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(61, 210, 204, 0.1);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
+    box-shadow: 0 0 15px rgba(61, 210, 204, 0.2);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
